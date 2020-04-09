@@ -1,6 +1,6 @@
 var axios = require('axios').default
 //chamando a minha api 
-async function retornaTudao(id) {
+async function pesquisaPokemon(id) {
     console.log(id)
     const { data: pokemon } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     const { data: type } = await axios.get(`https://pokeapi.co/api/v2/type/${id}/`)
@@ -15,7 +15,7 @@ async function retornaTudao(id) {
     //traz resultados as promessas de habilidades
     var abilities = await Promise.all(abilitiesPromise)
 
-    const pokemons = type.pokemons.map(element => element.pokemon)
+    const pokemons = type.pokemon.map(element => element.pokemon)
     return {
         id: pokemon.id,
         name: pokemon.forms[0].name,
@@ -31,5 +31,5 @@ async function retornaTudao(id) {
 
     }
 }
-exports.retornaTudao = retornaTudao
+exports.pesquisaPokemon = pesquisaPokemon
 
