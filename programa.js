@@ -85,6 +85,7 @@ async function mostrarMenu() {
     do {
         console.log('@#$%&*¨@!*$#  E S C O L H A  +&*$#@!¨&*+?')
         console.log('Digite 1 para pesquisar POKÉMON por ID')
+        console.log('')
         console.log('Digite 7 para sair')
         var resposta = user.questionInt('Resposta: ')
         if (resposta === 1) {
