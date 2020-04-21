@@ -88,7 +88,7 @@ async function mostrarMenu() {
         console.log('Digite 7 para sair')
         var resposta = user.questionInt('Resposta: ')
         if (resposta === 1) {
-            await pesquisarPokemon()
+            await pesquisarPqokemon()
         }
     } while (resposta !== 7)
     console.log('Operação Encerrada!')
